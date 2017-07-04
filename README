@@ -1,0 +1,4 @@
+"Mapstruct -  D'Haese Robin"
+===========================================================
+Utility library to use together with mapstruct.
+Supplies some default interfaces that can reduce the amount of mapping code even more.
