@@ -1,22 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
         <groupId>com.rdhaese</groupId>
         <artifactId>boot-parent</artifactId>
-        <version>1.0.4</version>
+        <version>1.0.5-SNAPSHOT</version>
     </parent>
 
     <groupId>com.rdhaese.commons</groupId>
     <artifactId>mapstruct</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.0-SNAPSHOT</version>
 
     <description>Utility library to use together with mapstruct. Only contains some interfaces.</description>
 
+    <!--For no apparent reason, the property ${github.projectUrl} from the parent pom is replaced by
+     "https://github.com/rdhaese/mapstruct/mapstruct" in both url tags, which makes no sense! Even more, in the properties it is replaced correctly by
+     "https://github.com/rdhaese/mapstruct", weird...
+     Even if I override the property with a simple string link instead of constructing it from properties, this occurs...
+     {github.profileUrl} works as expected, strange... Am I going crazy?
+     TODO Check if reproducible in simple setup and submit issue. Already updated to latest stable maven version (3.5.0)
+     Hard setting them like this helps, to bad I have to do this.
+     EDIT:
+     Same happens with the connection and developerConnection... It looks like the ${project.artifactId} is replaced by "mapstruct/mapstruct" in these tags.-->
+    <url>https://github.com/rdhaese/mapstruct</url>
+    <scm>
+        <url>https://github.com/rdhaese/mapstruct</url>
+        <connection>scm:git:git://github.com/rdhaese/mapstruct.git</connection>
+        <developerConnection>scm:git:git@github.com:rdhaese/mapstruct.git</developerConnection>
+    </scm>
+
     <packaging>jar</packaging>
 
-  <scm>
-    <tag>mapstruct-1.0.0</tag>
-  </scm>
 </project>
