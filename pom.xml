@@ -5,7 +5,7 @@
     <parent>
         <groupId>com.rdhaese</groupId>
         <artifactId>boot-parent</artifactId>
-        <version>1.0.4</version>
+        <version>1.0.5</version>
     </parent>
 
     <groupId>com.rdhaese.commons</groupId>
@@ -22,13 +22,13 @@
      TODO Check if reproducible in simple setup and submit issue. Already updated to latest stable maven version (3.5.0)
      Hard setting them like this helps, to bad I have to do this.
      EDIT:
-     Same happens with the connection and developerConnection... It looks like the ${project.artifactId} is replaced by "mapstruct/mapstruct" in these tags.-->
-    <url>https://github.com/rdhaese/mapstruct</url>
+     Same happens with the connection and developerConnection... It looks like the ${project.artifactId} is replaced by "mapstruct/mapstruct" in these tags.
+     Found out I CAN use the properties, but I have to specify the following tags in every child project-->
+    <url>${github.projectUrl}</url>
     <scm>
-        <url>https://github.com/rdhaese/mapstruct</url>
-        <connection>scm:git:git://github.com/rdhaese/mapstruct.git</connection>
-        <developerConnection>scm:git:git@github.com:rdhaese/mapstruct.git</developerConnection>
-      <tag>HEAD</tag>
+        <url>${github.projectUrl}</url>
+        <connection>scm:git:git://github.com/${github.username}/${project.artifactId}.git</connection>
+        <developerConnection>scm:git:git@github.com:${github.username}/${project.artifactId}.git</developerConnection>
   </scm>
 
     <packaging>jar</packaging>
