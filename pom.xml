@@ -10,7 +10,7 @@
 
     <groupId>com.rdhaese.commons</groupId>
     <artifactId>mapstruct</artifactId>
-    <version>1.0.3-SNAPSHOT</version>
+    <version>1.0.3</version>
 
     <description>Utility library to use together with mapstruct. Only contains some interfaces.</description>
 
