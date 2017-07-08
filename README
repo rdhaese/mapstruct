@@ -2,3 +2,5 @@
 ===========================================================
 Utility library to use together with mapstruct.
 Supplies some default interfaces that can reduce the amount of mapping code even more.
+
+Depending on this project also gives you the dependency on mapstruct, a configured maven-compiler-plugin adn IntelliJ integration.
