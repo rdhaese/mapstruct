@@ -10,7 +10,7 @@
 
     <groupId>com.rdhaese.commons</groupId>
     <artifactId>mapstruct</artifactId>
-    <version>1.0.5-SNAPSHOT</version>
+    <version>1.0.5</version>
 
     <description>Utility library to use together with mapstruct. Only contains some interfaces.</description>
 
@@ -29,7 +29,7 @@
         <url>${github.projectUrl}</url>
         <connection>scm:git:git://github.com/${github.username}/${project.artifactId}.git</connection>
         <developerConnection>scm:git:git@github.com:${github.username}/${project.artifactId}.git</developerConnection>
-        <tag>mapstruct-1.0.3</tag>
+        <tag>mapstruct-1.0.5</tag>
     </scm>
 
     <packaging>jar</packaging>
