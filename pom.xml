@@ -4,9 +4,22 @@
 
     <groupId>com.rdhaese.commons</groupId>
     <artifactId>mapstruct</artifactId>
-    <version>1.0.8-SNAPSHOT</version>
+    <version>1.0.9</version>
 
     <description>Utility library to use together with mapstruct. Only contains some interfaces.</description>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>8</source>
+                    <target>8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
     <packaging>jar</packaging>
 
